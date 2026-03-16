@@ -171,8 +171,8 @@
     }
     #nav.scrolled {
       background: rgba(9,9,12,0.92);
-      backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
       padding: 18px var(--pad);
       border-bottom: 1px solid var(--border);
     }
@@ -234,7 +234,6 @@
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-    /* mobile menu */
     .nav-mobile-overlay {
       display: none;
       position: fixed;
@@ -263,23 +262,18 @@
       overflow: hidden;
       background: var(--bg);
     }
-    /* subtle ambient glow */
     #hero::before {
       content: '';
       position: absolute;
-      top: -10%;
-      right: -5%;
-      width: 55%;
-      height: 75%;
+      top: -10%; right: -5%;
+      width: 55%; height: 75%;
       background: radial-gradient(ellipse, rgba(200,168,120,0.055) 0%, transparent 70%);
       pointer-events: none;
     }
     #hero::after {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 0; left: 0; right: 0;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
     }
@@ -375,11 +369,9 @@
       animation: float 6s ease-in-out infinite;
     }
 
-    /* scroll indicator */
     .hero-scroll {
       position: absolute;
-      bottom: 44px;
-      left: var(--pad);
+      bottom: 44px; left: var(--pad);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -392,8 +384,7 @@
       color: var(--text-muted);
     }
     .hero-scroll-bar {
-      width: 1px;
-      height: 52px;
+      width: 1px; height: 52px;
       background: rgba(200,168,120,0.18);
       position: relative;
       overflow: hidden;
@@ -491,10 +482,8 @@
     .exp-card::before {
       content: '';
       position: absolute;
-      left: -36px;
-      top: 32px;
-      width: 9px;
-      height: 9px;
+      left: -36px; top: 32px;
+      width: 9px; height: 9px;
       border-radius: 50%;
       background: var(--gold);
       border: 2px solid var(--bg);
@@ -591,8 +580,7 @@
 
     .project-badge {
       position: absolute;
-      top: 22px;
-      right: 22px;
+      top: 22px; right: 22px;
       font-family: var(--font-ui);
       font-size: 9px;
       font-weight: 700;
@@ -689,8 +677,33 @@
       background: var(--gold-glow);
     }
 
+    /* ===== AWARDS ===== */
+    #awards { background: var(--surface); padding: 80px 0; }
+    .awards-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .award-pill {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: 100px;
+      transition: all 0.3s;
+    }
+    .award-pill:hover {
+      border-color: var(--border-gold);
+      color: var(--gold);
+      background: var(--gold-glow);
+    }
+
     /* ===== CONTACT ===== */
-    #contact { background: var(--surface); }
+    #contact { background: var(--bg); }
 
     .contact-inner { max-width: 660px; }
     .contact-heading {
@@ -709,9 +722,7 @@
       margin-bottom: 52px;
       max-width: 460px;
     }
-    .contact-links {
-      border-top: 1px solid var(--border);
-    }
+    .contact-links { border-top: 1px solid var(--border); }
     .contact-link {
       display: flex;
       justify-content: space-between;
@@ -760,6 +771,7 @@
     @media (max-width: 900px) {
       :root { --pad: 24px; }
       .section { padding: 80px 0; }
+      #awards { padding: 60px 0; }
 
       #nav { padding: 20px var(--pad); }
       #nav.scrolled { padding: 16px var(--pad); }
@@ -798,6 +810,7 @@
       <a href="#experience" class="nav-link">Experience</a>
       <a href="#projects" class="nav-link">Projects</a>
       <a href="#skills" class="nav-link">Skills</a>
+      <a href="#awards" class="nav-link">Awards</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -811,6 +824,7 @@
     <a href="#experience" class="nav-link" onclick="closeMobile()">Experience</a>
     <a href="#projects" class="nav-link" onclick="closeMobile()">Projects</a>
     <a href="#skills" class="nav-link" onclick="closeMobile()">Skills</a>
+    <a href="#awards" class="nav-link" onclick="closeMobile()">Awards</a>
     <a href="#contact" class="nav-cta" onclick="closeMobile()">Contact</a>
   </div>
 
@@ -824,9 +838,9 @@
           <span class="hero-name-bottom">Oluwarotimi</span>
         </h1>
         <p class="hero-bio">
-          CS student at Morgan State University (Class of 2025), building modern
-          web experiences, robust backends, and exploring the full spectrum of
-          software engineering.
+          CS graduate of Morgan State University (Class of 2025) and Software
+          Engineering Intern at Salesforce. Building full-stack products,
+          leading engineering teams, and turning ideas into shipped software.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -858,9 +872,9 @@
         <div>
           <h2 class="section-heading">Developer,<br/><em>Creator</em> &<br/>Culinary Expert</h2>
           <p class="about-bio">
-            I'm a Computer Science major at Morgan State University (Class of 2025),
-            with experience spanning web development, backend engineering, and game
-            development. My goal is to become a renowned Full Stack Developer —
+            I'm a Computer Science graduate of Morgan State University (Class of 2025),
+            with experience spanning web development, backend engineering, data analytics,
+            and game development. My goal is to become a renowned Full Stack Developer —
             building products that are technically excellent and beautifully crafted.
           </p>
           <p class="about-bio">
@@ -912,30 +926,47 @@
       <div class="exp-timeline">
 
         <div class="exp-card">
-          <div class="exp-period">Jun 2023 — Aug 2023</div>
+          <div class="exp-period">Jun 2024 — Aug 2024</div>
           <span class="exp-company">Salesforce</span>
-          <h3 class="exp-role">Full Stack Developer</h3>
+          <h3 class="exp-role">Software Engineering Intern</h3>
           <p class="exp-desc">
-            Worked with a software engineering team and project coach to build full-stack
-            web applications. Led a team of four to design and deploy a machine-learning
-            powered application helping high school students navigate the college transfer process.
+            Developed Tableau dashboards and SQL queries to provide business insights,
+            aiding executive decision-making on Salesforce tenant data placement across
+            AWS regions.
           </p>
           <ul class="exp-highlights">
+            <li>Enhanced service resilience by minimizing AWS blast radius risks and improving dashboard functionality for global tenant data management</li>
+            <li>Improved productivity by increasing dashboard update frequency and automating email notifications, reducing untracked data and customer dissatisfaction</li>
+            <li>Implemented four new features in the Sign Up Dashboard — including Org ID and Template ID filters — streamlining workflows for legal and engineering teams</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-period">Jun 2023 — Aug 2023</div>
+          <span class="exp-company">Salesforce</span>
+          <h3 class="exp-role">FutureForce Tech Launchpad</h3>
+          <p class="exp-desc">
+            Worked with a software engineering team and project coach to build full-stack
+            web applications using the PERN stack. Led a team of four to design and deploy
+            a machine-learning powered application helping high school students navigate
+            the college transfer process.
+          </p>
+          <ul class="exp-highlights">
+            <li>Developed full-stack applications using PostgreSQL, Express, React, and Node.js</li>
             <li>Built a microservice architecture to facilitate seamless data flow</li>
             <li>Optimized user suggestion feeds via natural language processing</li>
             <li>Leveraged AWS to store and access user information securely</li>
-            <li>Integrated Azure Cloud AI services into the React frontend</li>
           </ul>
         </div>
 
         <div class="exp-card">
           <div class="exp-period">Jan 2023 — May 2023</div>
           <span class="exp-company">Google</span>
-          <h3 class="exp-role">TechX Scholar</h3>
+          <h3 class="exp-role">Tech Exchange Scholar</h3>
           <p class="exp-desc">
-            Selected for Google's TechX scholarship program, collaborating on software
-            engineering, project management, and advanced data structures and algorithms
-            coursework taught directly by Google engineers.
+            Selected for Google's Tech Exchange scholarship program, collaborating on
+            software engineering, project management, and advanced data structures and
+            algorithms coursework taught directly by Google engineers.
           </p>
           <ul class="exp-highlights">
             <li>Studied advanced algorithms and data structures with Google engineers</li>
@@ -956,14 +987,34 @@
       <div class="projects-grid">
 
         <div class="project-card featured">
-          <span class="project-badge">Featured</span>
-          <div class="project-type">Full Stack Web Application</div>
+          <a href="http://107.22.68.190:4173/" target="_blank" rel="noopener" class="project-badge">Startup · Live ↗</a>
+          <div class="project-type">Full Stack Web Application · Team of 3</div>
+          <h3 class="project-title">Yardsell</h3>
+          <p class="project-desc">
+            Co-built a full-stack marketplace connecting HBCU student entrepreneurs with
+            clients through customizable business pages and storefronts. Built a robust
+            full-text search engine with typo-tolerance and relevance ranking, implemented
+            secure authentication with email verification, and deployed on AWS EC2 with
+            S3 media storage.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">AWS S3 + EC2</span>
+            <span class="tech-tag">bcrypt</span>
+            <span class="tech-tag">Nodemailer</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-type">Full Stack · Hackathon</div>
           <h3 class="project-title">HoyaHacks</h3>
           <p class="project-desc">
-            Led a cross-functional team of four to design and deploy a machine-learning
-            powered web application helping high school students navigate the college
-            transfer process. Built a responsive React frontend, a Python backend with
-            NLP-driven recommendation features, and integrated AWS and Azure AI services.
+            Led a team of four to build a machine-learning powered app helping high school
+            students navigate the college transfer process. Integrated NLP-driven
+            recommendations with a React frontend and Azure AI backend services.
           </p>
           <div class="project-tech">
             <span class="tech-tag">React</span>
@@ -971,38 +1022,23 @@
             <span class="tech-tag">Machine Learning</span>
             <span class="tech-tag">AWS</span>
             <span class="tech-tag">Azure AI</span>
-            <span class="tech-tag">NLP</span>
           </div>
         </div>
 
         <div class="project-card">
+          <a href="https://portfolio-revised.vercel.app/#hero" target="_blank" rel="noopener" class="project-badge">Portfolio · Live ↗</a>
           <div class="project-type">Frontend</div>
           <h3 class="project-title">Portfolio</h3>
           <p class="project-desc">
             Designed and built a responsive personal portfolio website to showcase my
             work and grow my personal brand. Implemented modern layout techniques with
-            React, CSS Flexbox, and component-based architecture.
+            React and CSS Flexbox.
           </p>
           <div class="project-tech">
             <span class="tech-tag">React</span>
             <span class="tech-tag">HTML5</span>
             <span class="tech-tag">CSS3</span>
             <span class="tech-tag">Flexbox</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-type">Game Development</div>
-          <h3 class="project-title">Unity Projects</h3>
-          <p class="project-desc">
-            Developed interactive game projects using Unity and C#, exploring game
-            mechanics, physics systems, and interactive UI design — broadening
-            my understanding of real-time rendering and user interaction patterns.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Unity</span>
-            <span class="tech-tag">C#</span>
-            <span class="tech-tag">Game Design</span>
           </div>
         </div>
 
@@ -1025,6 +1061,7 @@
             <span class="skill-chip">JavaScript</span>
             <span class="skill-chip">React</span>
             <span class="skill-chip">Figma</span>
+            <span class="skill-chip">Tkinter</span>
           </div>
         </div>
 
@@ -1036,32 +1073,55 @@
             <span class="skill-chip">Node.js</span>
             <span class="skill-chip">Express</span>
             <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">MySQL</span>
+            <span class="skill-chip">REST APIs</span>
           </div>
         </div>
 
         <div class="skill-group">
           <div class="skill-category">Cloud & DevOps</div>
           <div class="skill-chips">
-            <span class="skill-chip">AWS</span>
+            <span class="skill-chip">AWS S3 + EC2</span>
             <span class="skill-chip">Google Cloud</span>
             <span class="skill-chip">Azure</span>
+            <span class="skill-chip">Docker</span>
             <span class="skill-chip">Heroku</span>
-            <span class="skill-chip">Git</span>
-            <span class="skill-chip">GitHub</span>
+            <span class="skill-chip">Git / GitHub</span>
+            <span class="skill-chip">CI/CD</span>
           </div>
         </div>
 
         <div class="skill-group">
-          <div class="skill-category">Other</div>
+          <div class="skill-category">Data & Other</div>
           <div class="skill-chips">
-            <span class="skill-chip">Unity</span>
+            <span class="skill-chip">Tableau</span>
+            <span class="skill-chip">Airflow</span>
             <span class="skill-chip">Machine Learning</span>
             <span class="skill-chip">NLP</span>
-            <span class="skill-chip">REST APIs</span>
+            <span class="skill-chip">OOP</span>
             <span class="skill-chip">Agile</span>
+            <span class="skill-chip">Unity</span>
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards">
+    <div class="container reveal">
+      <div class="section-label">Recognition</div>
+      <h2 class="section-heading">Awards &<br/><em>Honors</em></h2>
+      <div class="awards-grid">
+        <span class="award-pill">Dean's List — Morgan State University</span>
+        <a href="https://www.morgan.edu/news/aws-hbcu-business-case-competition" target="_blank" rel="noopener" class="award-pill">AWS HBCU Business Pitch Winner ↗</a>
+        <span class="award-pill">Google Tech Exchange Scholar</span>
+        <span class="award-pill">CodePath FutureForce Scholar</span>
+        <span class="award-pill">Target Scholar</span>
+        <span class="award-pill">MSU SACS President</span>
+        <span class="award-pill">MSU DSC Member</span>
+        <span class="award-pill">National Sales Network Conference</span>
       </div>
     </div>
   </section>
@@ -1079,6 +1139,10 @@
           Whether it's a project, a role, or just a chat — reach out.
         </p>
         <div class="contact-links">
+          <a href="mailto:D.oluwarotimi5@gmail.com" class="contact-link">
+            <span>D.oluwarotimi5@gmail.com</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
           <a href="https://www.linkedin.com/in/daniel-oluwarotimi" target="_blank" rel="noopener" class="contact-link">
             <span>LinkedIn</span>
             <span class="contact-link-arrow">↗</span>
