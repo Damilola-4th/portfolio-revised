@@ -1,18 +1,47 @@
-# React + Vite
+# Daniel Oluwarotimi — Portfolio (Revised)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A revised, redesigned personal portfolio website for Daniel Oluwarotimi, a Full Stack Developer and Computer Science student at Morgan State University (Class of 2025).
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is a complete redesign of the original portfolio at [portfolio-be82c.web.app](https://portfolio-be82c.web.app/). The revised version features a dark luxury editorial aesthetic with modern typography, smooth scroll animations, and a fully responsive layout.
 
-## React Compiler
+The portfolio is built as a standalone HTML file (`frontend_design/index.html`) requiring no build step — open it directly in any browser.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Sections
 
-Note: This will impact Vite dev & build performances.
+- **Hero** — Introduction with profile photo, role label, and social links
+- **About** — Bio and personal interests
+- **Experience** — Timeline of roles at Google and Salesforce
+- **Projects** — Featured work including HoyaHacks and personal projects
+- **Skills** — Categorized technical toolkit
+- **Contact** — LinkedIn and GitHub links
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **HTML5 / CSS3 / Vanilla JS** — no framework or build tool required
+- **Google Fonts** — Cormorant Garamond, Syne, DM Sans
+- **Intersection Observer API** — scroll-triggered reveal animations
+
+## Design Highlights
+
+- Dark luxury editorial color palette (near-black + aged gold accents)
+- Responsive layout with mobile hamburger menu
+- Scroll-reveal animations on all sections
+- Sticky navbar with glass-blur effect on scroll
+- Asymmetric clip-path hero image with floating gold border frame
+
+## Project Structure
+
+```
+frontend_design/
+  index.html        # Complete standalone portfolio
+  profile_pic.jpeg  # Profile photo used in hero section
+src/
+  assets/           # Original React project assets
+README.md
+```
+
+## Live Demo
+
+Original: [portfolio-be82c.web.app](https://portfolio-be82c.web.app/)
